@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import web.model.User;
-import web.service.UserService;
+import web.service.UserServiceImpl;
 
 import javax.validation.Valid;
 
@@ -13,9 +13,9 @@ import javax.validation.Valid;
 @RequestMapping("/users")
 public class UserController {
 
-    final UserService service;
+    private final UserServiceImpl service;
 
-    public UserController(UserService service) {
+    public UserController(UserServiceImpl service) {
         this.service = service;
     }
 
